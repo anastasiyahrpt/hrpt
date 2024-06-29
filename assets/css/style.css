@@ -2167,6 +2167,168 @@ input[type="submit"]:focus {
 }
 
 
+/*------- SPEC STEPS BLOCK -------*/
+
+.find-spec-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.purple-step {
+    background: #4e3487 !important;
+    color: #ffffff;
+}
+
+.step-h1-white {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.step-desc-white {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+.find-spec-step {
+    padding: 200px 80px 40px 40px;
+    background: #f6f6f6;
+    box-shadow: 0px 0px 80px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    width: calc(33.33% - 15px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.number-bg {
+    font-weight: 400;
+    font-size: 220px;
+    color: #4e3487;
+    opacity: 0.15;
+    position: absolute;
+    top: -49px;
+    right: -30px;
+}
+
+.find-spec-step:last-child {
+    margin-right: 0;
+}
+
+.top-find-spec,
+.bottom-find-spec {
+    display: flex;
+}
+
+.top-find-spec {
+    margin-bottom: 20px;
+}
+
+.step-h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: #272727;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.step-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #272727;
+}
+
+/*------- END SPEC STEPS BLOCK -------*/
+
+/*------- FIND SPEC FORM BLOCK -------*/
+
+.forms-bg-violet {
+    background: linear-gradient(90deg, #4e3487 0%, #2e85aa 100%);
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.spec-find-form-serv {
+    margin: 80px 0;
+}
+
+.spec-find-form-wrap {
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 40px;
+    height: fit-content;
+    padding: 90px 40px 40px 40px;
+}
+
+.spec-find-text {
+    width: calc(50% - 20px);
+}
+
+.spec-find-h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 53px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.spec-find-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+.find-spec-form-wrap {
+    width: calc(50% - 20px);
+}
+
+.form-field-white {
+    padding: 15px 46px 15px 15px;
+    height: 52px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.find-spec-form {
+    display: flex;
+    gap: 20px;
+}
+
+.find-spec-field {
+    width: calc(33.33% - 10px);
+}
+
+.find-spec-btn {
+    width: calc(33.33% - 10px);
+}
+
+.bottom-desc-small {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+/*------- END FIND SPEC FORM BLOCK -------*/
+
+
 
 
 
