@@ -499,7 +499,11 @@ input[type="submit"]:focus {
     font-weight: 700;
 }
 
-.success-content .count-text:after {
+.success-content .count-text:nth-child(1)::after,  .success-content .count-text:nth-child(3)::after{
+    content: '%';
+}
+
+.success-content .count-text:nth-child(2)::after{
     content: '+';
 }
 
