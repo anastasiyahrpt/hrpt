@@ -500,7 +500,7 @@ input[type="submit"]:focus {
 }
 
 .success-content .count-text::after{
-    content: attr('content');
+    content: attr(content);
 }
 
 .success-content p {
