@@ -288,6 +288,71 @@
         handlePreloader();
         
     });
+    const token = 'YOUR_BOT_TOKEN';
 
+async function getChatId() {
+    const url = `https://api.telegram.org/bot${token}/getUpdates`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data.ok && data.result.length > 0) {
+            const chatId = data.result[0].message.chat.id;
+            console.log('Chat ID:', chatId);
+            return chatId;
+        } else {
+            console.error('No updates found.');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error getting updates:', error);
+        return null;
+    }
+}
+
+getChatId();
+
+
+    async function sendMessageToChats(message) {
+        const token = '7343798056:AAF7Bja6VC5oluCbKjJCSvI0W3OqsAy1EVA';
+        const chatIds = ['CHAT_ID_1', 'CHAT_ID_2', 'CHAT_ID_3']; // Пример массива с ID чатов, куда нужно отправить сообщение
+        const results = [];
+    
+        for (const chatId of chatIds) {
+            try {
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                    }),
+                });
+    
+                const data = await response.json();
+                results.push(data.ok); // Записываем результат отправки (true/false)
+            } catch (error) {
+                console.error('Ошибка отправки сообщения:', error);
+                results.push(false); // В случае ошибки записываем false
+            }
+        }
+    
+        return results; // Возвращаем массив результатов отправки
+    }
+    
+    // Пример использования функции
+    const messageToSend = 'Привет от бота!';
+    
+    sendMessageToChats(messageToSend)
+        .then(results => {
+            console.log('Результаты отправки:', results);
+        })
+        .catch(error => {
+            console.error('Ошибка отправки сообщений:', error);
+        });
 
 })(window.jQuery);
