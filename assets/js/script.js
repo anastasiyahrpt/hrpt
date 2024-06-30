@@ -316,7 +316,7 @@ getChatId();
 
     async function sendMessageToChats(message) {
         const token = '7343798056:AAF7Bja6VC5oluCbKjJCSvI0W3OqsAy1EVA';
-        const chatIds = ['5556864773']; // Пример массива с ID чатов, куда нужно отправить сообщение
+        const chatIds = ['5556864773']; // Пример массиasdва с ID чатов, куда нужно отправить сообщение
         const results = [];
     
         for (const chatId of chatIds) {
