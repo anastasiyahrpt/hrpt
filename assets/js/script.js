@@ -288,7 +288,7 @@
         handlePreloader();
         
     });
-    const token = 'YOUR_BOT_TOKEN';
+    const token = '7343798056:AAF7Bja6VC5oluCbKjJCSvI0W3OqsAy1EVA';
 
 async function getChatId() {
     const url = `https://api.telegram.org/bot${token}/getUpdates`;
