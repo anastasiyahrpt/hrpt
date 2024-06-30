@@ -2202,7 +2202,7 @@ input[type="submit"]:focus {
 }
 
 .find-spec-step {
-    padding: 200px 80px 40px 40px;
+    padding: 200px 20px 40px 40px;
     background: #f6f6f6;
     box-shadow: 0px 0px 80px rgb(0 0 0 / 20%);
     border-radius: 10px;
@@ -2210,6 +2210,7 @@ input[type="submit"]:focus {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    text-align: right;
 }
 
 @media(max-width: 1200px){
@@ -2227,7 +2228,7 @@ input[type="submit"]:focus {
 .number-bg {
     font-weight: 400;
     font-size: 180px;
-    color: #4e3487;
+    color: var(--primary-color);
     opacity: 0.15;
     position: absolute;
     top: 100px;
@@ -2239,6 +2240,7 @@ input[type="submit"]:focus {
 
 .find-spec-step:last-child {
     margin-right: 0;
+    background-color: var(--primary-color) !important;
 }
 
 .top-find-spec,
