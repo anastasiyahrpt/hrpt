@@ -2212,14 +2212,29 @@ input[type="submit"]:focus {
     overflow: hidden;
 }
 
+@media(max-width: 1200px){
+    .find-spec-step{
+        width: calc(50% - 15px);
+    }
+}
+
+@media(max-width: 650px){
+    .find-spec-step{
+        width: 100%;
+    }
+}
+
 .number-bg {
     font-weight: 400;
-    font-size: 220px;
+    font-size: 180px;
     color: #4e3487;
     opacity: 0.15;
     position: absolute;
-    top: -49px;
+    top: 100px;
     right: -30px;
+    width: 100%;
+    left: 100%;
+    transform: translate(-100%, 0);
 }
 
 .find-spec-step:last-child {
