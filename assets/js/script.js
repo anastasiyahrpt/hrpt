@@ -315,7 +315,7 @@ getChatId();
 
 
     async function sendMessageToUsers(message) {
-    const token = 'YOUR_BOT_TOKEN';
+    const token = '7343798056:AAF7Bja6VC5oluCbKjJCSvI0W3OqsAy1EVA';
     const userIds = ['5556864773']; // Пример массива с ID пользователей, которым нужно отправить сообщение
     const results = [];
 
