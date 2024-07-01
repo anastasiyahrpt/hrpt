@@ -314,40 +314,40 @@ async function getChatId() {
 getChatId();
 
 
-    async function sendMessageToChats(message) {
-        const token = '7343798056:AAF7Bja6VC5oluCbKjJCSvI0W3OqsAy1EVA';
-        const chatIds = ['5556864773']; // Пример массиasdва с ID чатов, куда нужно отправить сообщение
-        const results = [];
-    
-        for (const chatId of chatIds) {
-            try {
-                const url = `https://api.telegram.org/bot${token}/sendMessage`;
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                    }),
-                });
-    
-                const data = await response.json();
-                results.push(data.ok); // Записываем результат отправки (true/false)
-            } catch (error) {
-                console.error('Ошибка отправки сообщения:', error);
-                results.push(false); // В случае ошибки записываем false
-            }
+    async function sendMessageToUsers(message) {
+    const token = 'YOUR_BOT_TOKEN';
+    const userIds = ['5556864773']; // Пример массива с ID пользователей, которым нужно отправить сообщение
+    const results = [];
+
+    for (const userId of userIds) {
+        try {
+            const url = `https://api.telegram.org/bot${token}/sendMessage`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: userId,
+                    text: message,
+                }),
+            });
+
+            const data = await response.json();
+            results.push(data.ok); // Записываем результат отправки (true/false)
+        } catch (error) {
+            console.error('Ошибка отправки сообщения:', error);
+            results.push(false); // В случае ошибки записываем false
         }
-    
-        return results; // Возвращаем массив результатов отправки
     }
+
+    return results; // Возвращаем массив результатов отправки
+}
     
     // Пример использования функции
     const messageToSend = 'Привет от бота!';
     
-    sendMessageToChats(messageToSend)
+    sendMessageToUsers(messageToSend)
         .then(results => {
             console.log('Результаты отправки:', results);
         })
